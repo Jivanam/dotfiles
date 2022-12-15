@@ -47,8 +47,9 @@ Most of the linux system comes with bash as default shell. Installing Zsh shell 
 `
 
 ## Move/Delete the existing custom folder from .oh-my-zsh folder
-`rm -r .oh-my-zsh/custom
-`
+`rm -r .oh-my-zsh/custom`
+
+---
 
 ## Create symlink
 
