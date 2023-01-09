@@ -6,7 +6,7 @@ sgdotfiles="$HOME/.sgdotfiles" #dot files location
 
 # #Installing Dependencies (arch only)
 # echo "Installing Dependencies"
-# sudo pacman -S i3-gaps rofi kdenlive alacritty ranger dunst neofetch zsh git polybar picom nitrogen arandr udisk2 thunar blueman
+# sudo pacman -S i3-gaps rofi kdenlive alacritty ranger dunst neofetch zsh git polybar picom nitrogen arandr udisk2 thunar blueman flameshot
 
 #Download Dots
 # echo "Downloading Dotfiles"
