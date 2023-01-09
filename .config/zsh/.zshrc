@@ -31,8 +31,8 @@ fpath=(~/.config/zsh/plugin/zsh-completions/src $fpath)
 # theme/plugins
 source ~/.config/zsh/plugin/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.config/zsh/plugin/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.config/zsh/plugin/powerlevel10k/powerlevel10k.zsh-theme
 
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 source /usr/share/nvm/init-nvm.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.

@@ -7,3 +7,6 @@
 [submodule ".config/zsh/plugin/zsh-syntax-highlighting"]
 	path = .config/zsh/plugin/zsh-syntax-highlighting
 	url = git@github.com:zsh-users/zsh-syntax-highlighting.git
+[submodule ".config/zsh/plugin/powerlevel10k"]
+	path = .config/zsh/plugin/powerlevel10k
+	url = git@github.com:romkatv/powerlevel10k.git
