@@ -27,6 +27,8 @@ bindkey "^[[1;5D" backward-word
 
 # autocompletion
 fpath=(~/.config/zsh/plugin/zsh-completions/src $fpath)
+autoload -Uz compinit
+compinit
 
 # theme/plugins
 source ~/.config/zsh/plugin/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
