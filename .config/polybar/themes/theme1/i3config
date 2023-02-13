@@ -360,7 +360,7 @@ type = internal/network
 interface = enp5s0
 label-connected = "%upspeed:7%"
 format-connected = <label-connected>
-format-connected-prefix = " "
+format-connected-prefix = "  "
 format-connected-prefix-foreground = #8d62ad
 format-connected-foreground = #8d62ad
 
@@ -374,7 +374,7 @@ type = internal/network
 interface = enp5s0
 label-connected = "%downspeed:7%"
 format-connected = <label-connected>
-format-connected-prefix = " "
+format-connected-prefix = "  "
 format-connected-prefix-foreground = #8d62ad
 format-connected-foreground = #8d62ad
 
