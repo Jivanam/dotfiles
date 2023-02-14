@@ -199,7 +199,7 @@ bindsym $mod+Ctrl+less move workspace to output left
 # Autostart applications
 
 # set display
-exec --no-startup-id xrandr --output DP-1 --mode 1920x1080 --pos 1920x0 --rotate left --output HDMI-1 --off --output HDMI-2 --primary --mode 1920x1080 --pos 0x570 --rotate normal
+# exec --no-startup-id --output HDMI-2 --primary --mode 3840x2160 --pos 1920x0 --rotate normal --output DP-1 --mode 1920x1080 --pos 5760x120 --rotate left --output HDMI-1 --off --output DVI-D-1-1 --off --output HDMI-1-3 --off --output VGA-1-1 --mode 1920x1080 --pos 0x912 --rotate normal
 
 # Start polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
