@@ -1,10 +1,2 @@
-configuration {
- display-drun: "Applications:";
- drun-display-format: "{icon} {name}";
- modi: "window,drun,ssh,combi";
- combi-modi: "window,drun,ssh";
- show-icons: true;
- icon-them: "Papirus";
- font: "SauceCodePro Nerd Font Mono 10";
-}
-@theme "~/.config/rofi/themes/SG-theme-1.rasi"
+* {lightbg: #141a1b; background: #141a1b; lightfg: #16a085; foreground: #eeeeee;}
+@theme "/home/elon/.config/rofi/themes/SG-theme-1.rasi"
