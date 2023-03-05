@@ -1,0 +1,57 @@
+# Default config for sway
+#
+# Copy this to ~/.config/sway/config and edit it to your liking.
+#
+# Read `man 5 sway` for a complete reference.
+
+# styles - set the folder for your theme definition file
+set $theme /usr/share/sway/themes/matcha-green
+
+# theme variables
+include $theme/definitions
+
+# global variables
+include /etc/sway/definitions
+
+# user variables
+include $HOME/.config/sway/definitions.d/*.conf
+
+include /etc/sway/inputs/*
+include /etc/sway/outputs/*
+
+# enable modes
+include /etc/sway/modes/*
+
+# only enable this if every app you use is compatible with wayland
+# xwayland disable
+
+# include additional configs e.g. to autostart applications
+include /etc/sway/config.d/*
+
+# user config
+include $HOME/.config/sway/config.d/*.conf
+
+exec ~/.azotebg
+
+output DP-1 pos 0 0 res 1920x1080
+output HDMI-A-1 scale 1.8
+output HDMI-A-1 pos 1920 0 res 3840x2160
+output DVI-D-1 transform 270
+# move focused workspace between monitors
+
+bindsym $mod+Ctrl+greater move workspace to output right
+bindsym $mod+Ctrl+less move workspace to output left
+
+# define display output names
+set $disp1 "DP-1"
+set $disp2 "HDMI-A-1"
+set $disp3 "DVI-D-1"
+
+# default display outputs for workspaces with fallback to disp1
+workspace 1 output $disp2 
+workspace 2 output $disp2 
+workspace 3 output $disp2 
+workspace 4 output $disp1 
+workspace 5 output $disp1 
+workspace 6 output $disp1 
+workspace 7 output $disp3 
