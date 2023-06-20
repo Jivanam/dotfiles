@@ -1,26 +1,4 @@
-# Syncing zsh profile
-
-## Use/install zsh shell
-
-Most of the linux system comes with bash as default shell. Installing Zsh shell and using is not complex.
-
-*For example, in debain based Linux one can easily install Zsh using apt package manager*
-
-*`sudo apt install zsh`*
-
-**Check zsh version** with `zsh --version`
-
-**Change shell to zsh** with `chsh -s $(which zsh)`
-
-*To use the new shell, log out of terminaland log in*
-
-## Install oh-my-zsh
-
-- Grab installation command of [here](https://ohmyz.sh/#install)
-
----
-
-## Now, clone the repo on to your local machine
+# Cloning and pulling dot files
 
 `git clone --recurse-submodules https://github.com/Jivanam/dotfiles.git`
 
@@ -30,8 +8,6 @@ Most of the linux system comes with bash as default shell. Installing Zsh shell 
 - `cd dotfiles`
 - `git submodule update --init --recursive`
 
----
-
 ## Pulling with submodules
 
 **Pull all changes in the repo including changes in the submodules**
@@ -40,18 +16,27 @@ Most of the linux system comes with bash as default shell. Installing Zsh shell 
 
 ---
 
-## Move/Delete the existing .(dot) files
-`rm 
-.zshrc
-.p10k.zsh
-`
+# Installing zsh shell
 
-## Move/Delete the existing custom folder from .oh-my-zsh folder
-`rm -r .oh-my-zsh/custom`
+Most of the linux system comes with bash as default shell. Installing Zsh shell and using is not complex.
+
+*For example, in debain based Linux one can easily install Zsh using apt package manager*
+
+*`sudo apt install zsh`*
+
+*Whereas on Arch, you can do the same with the pacman*
+
+*`sudo pacman -S zsh`*
+
+**Check zsh version** with `zsh --version`
+
+**Change shell to zsh** with `chsh -s $(which zsh)`
+
+*To use the new shell, log out of terminaland log in*
 
 ---
 
-## Create symlink
+## Creating symlink
 
 *First get the path of the symlink target files/folder*
 
@@ -65,6 +50,4 @@ Run `pwd` on the target folder
 
 `ln -nfs /home/$USER/dotfiles/.zshrc /home/$USER/.zshrc`
 
-`ln -nfs /home/$USER/dotfiles/.p10k.zsh /home/$USER/.p10k.zsh`
-
-`ln -nfs /home/$USER/dotfiles/.oh-my-zsh/custom /home/$USER/.oh-my-zsh/`
+OR you can use the **`setup.sh`** shell script to apply it one go.
