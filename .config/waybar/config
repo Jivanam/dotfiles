@@ -27,6 +27,7 @@
     ],
     "modules-right": [
         "network",
+        "network#speed",
         "memory",
         "cpu",
         "temperature",
@@ -76,7 +77,7 @@
 
     "cpu": {
         "interval": 5,
-        "format": "  {usage}% ({load})", // Icon: microchip
+        "format": " {usage}% ({load})", // Icon: microchip
         "states": {
           "warning": 70,
           "critical": 90
@@ -95,7 +96,7 @@
 
     "memory": {
         "interval": 5,
-        "format": "  {}%", // Icon: memory
+        "format": " {}%", // Icon: memory
         "states": {
             "warning": 70,
             "critical": 90
@@ -103,11 +104,17 @@
     },
 
     "network": {
-        "interval": 5,
+        "interval": 1,
         "format-wifi": "  {essid} ({signalStrength}%)", // Icon: wifi
-        "format-ethernet": "  {ifname}: {ipaddr}/{cidr}", // Icon: ethernet
+        "format-ethernet": "  {ipaddr}/{cidr}", // Icon: ethernet
         "format-disconnected": "⚠  Disconnected",
         "tooltip-format": "{ifname}: {ipaddr}"
+    },
+
+    "network#speed": {
+        "interval": 1,
+        "interface": "enp5s0",
+        "format": " {bandwidthUpBits}  {bandwidthDownBits}",
     },
 
     "sway/mode": {
@@ -156,7 +163,7 @@
     "temperature": {
       "critical-threshold": 80,
       "interval": 5,
-      "format": "{icon}  {temperatureC}°C",
+      "format": "{icon} {temperatureC}°C",
       "format-icons": [
           "", // Icon: temperature-empty
           "", // Icon: temperature-quarter

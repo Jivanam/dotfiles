@@ -51,7 +51,7 @@
     background: #323232;
     color: white;
     font-family: JetbrainsMono Nerd Font;
-    font-size: 12px;
+    font-size: 10px;
 }
 
 /* Each module */
@@ -62,11 +62,11 @@
 #memory,
 #mode,
 #network,
+#speed,
 #pulseaudio,
 #temperature,
 #tray {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 0 7px;
 }
 
 
@@ -98,12 +98,17 @@
     animation-duration: 2s;
 }
 
-#clock {
+#clock.time {
+    color: #be9dfa;
     font-weight: bold;
 }
 
+#clock.date{
+    color: #fadb84;
+}
+
 #cpu {
-  /* No styles */
+  color: #5e81ac;
 }
 
 #cpu.warning {
@@ -115,6 +120,7 @@
 }
 
 #memory {
+    color: #d08770;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
@@ -138,7 +144,11 @@
 }
 
 #network {
-    /* No styles */
+    color: #55aa55;
+}
+
+#network.speed {
+    color: #849e5d;
 }
 
 #network.disconnected {
@@ -153,12 +163,8 @@
     /* No styles */
 }
 
-#custom-spotify {
-    color: rgb(102, 220, 105);
-}
-
 #temperature {
-    /* No styles */
+    color: #bf616a;
 }
 
 #temperature.critical {
@@ -170,7 +176,17 @@
 }
 
 #window {
-    font-weight: bold;
+    color: #f2dd22;
+    font-weight: 500;
+    font-size: 10px;
+    margin: 3px 5px;
+    padding: 0 10px;
+    border: 1px solid #6b6429;
+    border-radius: 5px;
+}
+
+#waybar.empty #window {
+    border: none;
 }
 
 #workspaces button {
