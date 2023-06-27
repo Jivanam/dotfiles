@@ -19,6 +19,7 @@
     "height": 30,
 
     "modules-left": [
+        "custom/wofi",
         "sway/workspaces",
         "sway/mode"
     ],
@@ -117,6 +118,14 @@
         "format": " {bandwidthUpBits}  {bandwidthDownBits}",
     },
 
+
+    "custom/wofi": {
+        "format": " ", // Icon for the module
+        "tooltip-format": "Wofi menu",
+        "on-click": "exec wofi --show drun -I", // Command to execute when the module is clicked
+    },
+
+
     "sway/mode": {
         "format": "<span style=\"italic\">  {}</span>", // Icon: expand-arrows-alt
         "tooltip": false
@@ -124,7 +133,12 @@
 
     "sway/window": {
         "format": "{}",
-        "max-length": 120
+        "max-length": 120,
+        "rewrite": {
+            "(.*)- Google Chrome": "  $1",
+            "(.*)- Visual Studio Code": "  $1",
+            "(.*)Alacritty": "  Alacritty Terminal"
+        }
     },
 
     "sway/workspaces": {

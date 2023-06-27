@@ -190,21 +190,32 @@
 }
 
 #workspaces button {
-    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
     /* To compensate for the top border and still have vertical centering */
-    padding-bottom: 2px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 0 7px;
     color: #888888;
 }
 
 #workspaces button.focused {
-    border-color: #4c7899;
-    color: white;
-    background-color: #285577;
+    border-color: #5fa8f5;
+    color: #5fa8f5;
 }
+
+#workspaces button.focused:hover{
+    color: #285577;
+}
+
 
 #workspaces button.urgent {
     border-color: #c9545d;
     color: #c9545d;
+}
+
+#custom-wofi {
+    padding: 0 10px;
+    font-size: 12px;
+}
+
+#custom-wofi:hover {
+    color: #0da9d9;
 }
