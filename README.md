@@ -1,53 +1,61 @@
-# Cloning and pulling dot files
+# dotfiles
 
-`git clone --recurse-submodules https://github.com/Jivanam/dotfiles.git`
+## Usage
 
-*This will clone a repo including its submodules*
 
-### To load submodules on a repo that wasn't cloned as above
-- `cd dotfiles`
-- `git submodule update --init --recursive`
+First clone this repo into your **$HOME**
 
-## Pulling with submodules
+- ### Cloning and pulling dot files
 
-**Pull all changes in the repo including changes in the submodules**
+      git clone --recurse-submodules https://github.com/Jivanam/dotfiles.git
 
-`git pull --recurse-submodules`
+    *This will clone a repo including its submodules*
 
----
+    **To load submodules on a repo that wasn't cloned as above**
 
-# Installing zsh shell
+      cd dotfiles
+      git submodule update --init --recursive
 
-Most of the linux system comes with bash as default shell. Installing Zsh shell and using is not complex.
+    
+    **Pull all changes in the repo including changes in the submodules**
 
-*For example, in debain based Linux one can easily install Zsh using apt package manager*
+      git pull --recurse-submodules
 
-*`sudo apt install zsh`*
 
-*Whereas on Arch, you can do the same with the pacman*
+Next, install the zsh shell if not installed or available in your
 
-*`sudo pacman -S zsh`*
+- ### Installing zsh shell
 
-**Check zsh version** with `zsh --version`
+    Most of the linux system comes with bash as default shell. Installing zsh shell and using is not complex.
 
-**Change shell to zsh** with `chsh -s $(which zsh)`
+    *For example, in debain based Linux one can easily install zsh using apt package manager*
 
-*To use the new shell, log out of terminaland log in*
+      sudo apt install zsh
 
----
+    *Whereas on Arch, you can do the same with the pacman*
 
-## Creating symlink
+      sudo pacman -S zsh
 
-*First get the path of the symlink target files/folder*
+    *On Mac OS, one can use Homebrew to install zsh shell
 
-Run `pwd` on the target folder
+      brew install zsh
 
-**Symlink format**
+    *Homebrew link can be found [here](https://brew.sh/)*
 
-`ln -nfs [path to the cloned dotfiles folder]/[target filename] [path to where we want to create symlink]/[file name]`
+Next, create a symlink.
 
-*For example,*
+- ## Creating symlink
 
-`ln -nfs /home/$USER/dotfiles/.zshrc /home/$USER/.zshrc`
+    *First get the path of the symlink target files/folder*
 
-OR you can use the **`setup.sh`** shell script to apply it one go.
+    Run `pwd` on the target folder
+
+    **Symlink format**
+
+      ln -nfs [path to the cloned dotfiles folder]/[target filename] [path to where we want to create symlink]/[file name]
+
+    *For example,*
+
+      `ln -nfs /home/$USER/dotfiles/.zshrc /home/$USER/.zshrc`
+
+    OR you can use the **`setup.sh`** shell script to apply it one go.
