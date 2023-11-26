@@ -1,6 +1,6 @@
 {
     "label" : "lock",
-    "action" : "swaylock",
+    "action" : "/home/elon/.config/wlogout/custom_lock.sh",
     "text" : "Lock (l)",
     "keybind" : "l"
 }
@@ -24,7 +24,7 @@
 }
 {
     "label" : "suspend",
-    "action" : "systemctl suspend",
+    "action" : "systemctl suspend && /home/elon/.config/wlogout/custom_lock.sh",
     "text" : "Suspend (u)",
     "keybind" : "u"
 }

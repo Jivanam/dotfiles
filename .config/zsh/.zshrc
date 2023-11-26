@@ -1,7 +1,7 @@
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
-export PATH=$HOME/miniconda3/bin:$PATH
+export PATH=$PATH:$HOME/.local/bin
 
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -47,19 +47,4 @@ source /usr/share/nvm/init-nvm.sh
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 
 neofetch
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/elon/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/elon/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/elon/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/elon/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 

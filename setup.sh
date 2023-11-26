@@ -22,6 +22,8 @@ ln -sfn $HOME/.sgdotfiles/.config/wofi ~/.config
 ln -sfn $HOME/.sgdotfiles/.config/sway ~/.config
 ln -sfn $HOME/.sgdotfiles/.config/wlogout ~/.config
 ln -sfn $HOME/.sgdotfiles/.config/waybar ~/.config
+ln -sfn $HOME/.sgdotfiles/.config/walogout ~/.config
+ln -sfn $HOME/.sgdotfiles/.config/kitty ~/.config
 
 
 # configs for i3

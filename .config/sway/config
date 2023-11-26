@@ -7,7 +7,7 @@
 # Set GTK theme for GTK applications like Nautilus
 exec_always --no-startup-id env GTK_THEME=Dracula
 
-font pango:JetbrainsMono Nerd Font 8
+font pango:JetBrainsMono NF 8
 
 gaps inner 4
 gaps outer 2
@@ -29,7 +29,7 @@ set $up k
 set $right l
 
 # Your preferred terminal emulator
-set $term alacritty
+set $term kitty
 
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
@@ -90,7 +90,7 @@ bindsym $mod+Shift+s exec "$HOME/.config/sway/grim-screenshot.sh"
 #
 
 input * {
-    xkb_layout "gb"
+    xkb_layout "us"
     xkb_variant ""
     xkb_options ""
 }
