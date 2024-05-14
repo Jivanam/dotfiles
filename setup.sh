@@ -16,14 +16,12 @@ cd $sgdotfiles
 ln -sfn $HOME/.sgdotfiles/.zshenv ~/
 ln -sfn $HOME/.sgdotfiles/.config/alacritty ~/.config
 ln -sfn $HOME/.sgdotfiles/.config/dunst ~/.config
-ln -sfn $HOME/.sgdotfiles/.config/neofetch ~/.config
+ln -sfn $HOME/.sgdotfiles/.config/fastfetch ~/.config
 ln -sfn $HOME/.sgdotfiles/.config/zsh ~/.config
 ln -sfn $HOME/.sgdotfiles/.config/wofi ~/.config
 ln -sfn $HOME/.sgdotfiles/.config/sway ~/.config
 ln -sfn $HOME/.sgdotfiles/.config/wlogout ~/.config
 ln -sfn $HOME/.sgdotfiles/.config/waybar ~/.config
-ln -sfn $HOME/.sgdotfiles/.config/walogout ~/.config
-ln -sfn $HOME/.sgdotfiles/.config/kitty ~/.config
 
 
 # configs for i3
