@@ -1,10 +1,10 @@
 fastfetch
 
+export ANDROID_SDK_HOME=$HOME/.config
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$HOME/.local/bin
-
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -43,8 +43,6 @@ source ~/.config/zsh/plugin/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.config/zsh/plugin/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.config/zsh/plugin/powerlevel10k/powerlevel10k.zsh-theme
 
-source /usr/share/nvm/init-nvm.sh
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 
@@ -53,3 +51,4 @@ export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
 
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init --path)"
+source /usr/share/nvm/init-nvm.sh
