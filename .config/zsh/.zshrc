@@ -6,6 +6,13 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$HOME/.local/bin
 
+# Get the PID of the gnome-keyring-daemon via systemd
+export GNOME_KEYRING_PID=$(systemctl --user show -p MainPID gnome-keyring-daemon | sed 's/MainPID=//')
+
+# Query the socket or environment variables if needed (example method using systemd's environment)
+export GNOME_KEYRING_CONTROL=$(systemctl --user show gnome-keyring-daemon | grep -oP 'GNOME_KEYRING_CONTROL=\K.+' )
+
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -16,11 +23,8 @@ fi
 # Created by newuser for 5.9
 
 # Changing "ls" to "exa"
-alias ls='exa -al --color=always --group-directories-first' # my preferred listing
-alias la='exa -a --color=always --group-directories-first'  # all files and dirs
-alias ll='exa -l --color=always --group-directories-first'  # long format
-alias lt='exa -aT --color=always --group-directories-first' # tree listing
-alias l.='exa -a | egrep "^\."'
+alias ls='eza -l -a --icons=always --color=always --group-directories-first' # my preferred listing
+alias l.='eza -a | egrep "^\."'
 
 # confirm before overwriting something
 alias cp="cp -i"
@@ -51,4 +55,6 @@ export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
 
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init --path)"
-source /usr/share/nvm/init-nvm.sh
+
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

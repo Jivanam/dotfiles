@@ -4,8 +4,6 @@
 #
 # Read `man 5 sway` for a complete reference.
 
-# Set GTK theme for GTK applications like Nautilus
-exec_always --no-startup-id env GTK_THEME=Dracula
 
 font pango:JetBrainsMono 8
 
@@ -15,6 +13,13 @@ gaps outer 2
 default_border none
 default_border pixel 1
 
+set $gnome-schema org.gnome.desktop.interface
+
+exec_always import-gsettings \
+    gtk-theme:gtk-theme-name \
+    icon-theme:gtk-icon-theme-name \
+    cursor-theme:gtk-cursor-theme-name
+    
 # Open udiskie
 exec --no-startup-id udiskie -s --file-manager=thunar
 

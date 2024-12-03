@@ -12,17 +12,23 @@ sgdotfiles="$HOME/.sgdotfiles" #dot files location
 # echo "Downloading Dotfiles"
 # cd && git clone https://gitlab.com/shason/dotfiles.git
 
-cd $sgdotfiles
-ln -sfn $HOME/.sgdotfiles/.zshenv ~/
-ln -sfn $HOME/.sgdotfiles/.config/alacritty ~/.config
-ln -sfn $HOME/.sgdotfiles/.config/dunst ~/.config
-ln -sfn $HOME/.sgdotfiles/.config/fastfetch ~/.config
-ln -sfn $HOME/.sgdotfiles/.config/zsh ~/.config
-ln -sfn $HOME/.sgdotfiles/.config/wofi ~/.config
-ln -sfn $HOME/.sgdotfiles/.config/sway ~/.config
-ln -sfn $HOME/.sgdotfiles/.config/wlogout ~/.config
-ln -sfn $HOME/.sgdotfiles/.config/waybar ~/.config
+# Create the symbolic links
+ln -sfn $sgdotfiles/.zshenv ~/
 
+# Create symlinks for the directories in .config/
+ln -sfn $sgdotfiles/.config/alacritty ~/.config/
+ln -sfn $sgdotfiles/.config/dunst ~/.config/
+ln -sfn $sgdotfiles/.config/fastfetch ~/.config/
+ln -sfn $sgdotfiles/.config/zsh ~/.config/
+ln -sfn $sgdotfiles/.config/wofi ~/.config/
+ln -sfn $sgdotfiles/.config/sway ~/.config/
+ln -sfn $sgdotfiles/.config/wlogout ~/.config/
+ln -sfn $sgdotfiles/.config/waybar ~/.config/
+
+# For individual files like one_dark.yml
+mkdir -p $HOME/.config/eza
+nano $HOME/.config/eza/theme.yml
+ln -sfn $sgdotfiles/.config/eza-themes/themes/one_dark.yml ~/.config/eza/theme.yml
 
 # configs for i3
 # ln -sfn $HOME/.sgdotfiles/.config/i3 ~/.config
